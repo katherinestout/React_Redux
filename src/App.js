@@ -1,25 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 
 class App extends Component {
+  state = {
+    age: 21
+  }
+  //takes current state and increases by one
+  onAgeUp = () => {
+//create a copy and mutate/return and set it
+this.setState({
+  ...this.state,
+  age: ++this.state.age
+})
+  }
+  //takes current state and decreases by one
+onAgeDown = () => {
+  this.setState({
+    ...this.state,
+    age: --this.state.age
+  })
+    }
+
+ 
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+       <div>Age: <span> {this.state.age}</span></div>
+       <button onClick={this.onAgeUp}>Age UP</button>
+       <button onClick = {this.onAgeDown}>Age Down</button>
       </div>
     );
   }
