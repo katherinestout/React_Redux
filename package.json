@@ -2,7 +2,7 @@
   "name": "react-redux-practice",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://katherinestout.github.io/react-redux-practice",
+  "homepage": "http://katherinestout.github.io/React_Redux",
   "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
