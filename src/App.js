@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import './App.css';
 
-class App extends Component {
+
+
   /*state = {
     age: 21
   }
@@ -27,7 +27,7 @@ onAgeDown = () => {
 <button onClick={this.onAgeUp}>Age UP</button>
 <button onClick = {this.onAgeDown}>Age Down</button>
 */
-
+class App extends Component {
   render() {
     return (
       <div>
@@ -45,13 +45,13 @@ onAgeDown = () => {
 const mapStateToProps = (state) => {
 return{
   age: state.age
-}
+};
 };
 const mapDispatchToProps = (dispatch) => {
   return {
     onAgeUp: () => dispatch({type: 'AGE_UP'}),
     onAgeDown: () => dispatch({type: 'AGE_DOWN'})
-  }
+  };
 };
 
 
