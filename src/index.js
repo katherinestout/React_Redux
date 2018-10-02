@@ -10,6 +10,6 @@ import reducer from './store/reducer';
 const store = createStore(reducer);
 
 //make the store available to the entire application
-//add it as a property and wrap the app in provider
+//pass store as a property and wrap the app in provider
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 
